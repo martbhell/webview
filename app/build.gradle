@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
-        applicationId "com.example.app"
-        minSdkVersion 21
-        targetSdkVersion 28
+        applicationId "se.wtangy.app"
+        minSdkVersion 15
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }

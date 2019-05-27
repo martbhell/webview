@@ -1,17 +1,16 @@
-package com.example.app;
+package se.wtangy.app;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebChromeClient;
 
-class MyWebViewClient extends WebViewClient {
+public class MyAppWebViewClient extends WebChromeClient {
 
-    @SuppressWarnings("deprecation")
-    @Override
+    //@Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        Uri uri = Uri.parse(url);
-        if (uri.getHost() != null && uri.getHost().contains("example.com")) {
+        if (Uri.parse(url).getHost().endsWith("wtangy.se")) {
             return false;
         }
 
